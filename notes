@@ -1,0 +1,34 @@
+Components:
+  - parking grid
+    -table? list of divs?
+  - Lot Link for the navigation
+  - modal dialog (for space status)
+    -calculate cost
+    - form to enter license plate
+    -
+  -
+
+Views:
+  - navigation (lot list)
+    -flex to adjust from the initial view to the sidebar view
+  - navigation + lot overview
+
+  - transaction report
+
+Routes:
+  - / (initial route)
+  -/lots (navigation lot list)
+  -/lots/:id (lot overview for a specific route)
+  - /lots/:id/:spot (modal dialog)
+  - /transactions (view all transactions company wide)
+
+Actions:
+  - toggle space occupancy
+  - calculate cost
+  -
+
+Store:
+  - array of lot objects
+    -each lot has an id and number of spaces
+    -each space has a true/false value
+    -of true, it will have a
