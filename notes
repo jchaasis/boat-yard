@@ -1,31 +1,64 @@
 Components:
-  - parking grid
-    -table? list of divs?
-  - Lot Link for the navigation
-  - modal dialog (for space status)
-    -calculate cost
-    - form to enter license plate
+
+  - for Lot view:
+    - list or marinas
     -
-  -
+    - header
+      - name of the lot
+      - counters for available, occupied, and total
+    - parking grid
+      a. table? list of divs?
+      b. loop through total spaces
+      - row
+        a. evenly divisible rows
+        b.
+        - space
+          a. boolean for occupied status
+          b. array index for space id?
+          c. display the id in the space
+
+  - for Lots Navigation
+    - Lot Link for the navigation
+      - <Link to route /lots/:id />
+
+  - modal dialog (for space status)
+    - when occupying form to enter license plate
+      a. post request
+    - when leaving display total cost
+    - "ok" button
+
+  - transactions table
+    - Columns: Lic#, check in time, check out time, total bill, lot number
+  - footer
 
 Views:
+
   - navigation (lot list)
     -flex to adjust from the initial view to the sidebar view
-  - navigation + lot overview
-
+  - lot overview
+    - nested routes
   - transaction report
+  - lot and navigation
 
 Routes:
+
   - / (initial route)
   -/lots (navigation lot list)
+
   -/lots/:id (lot overview for a specific route)
+      might need to be nested
   - /lots/:id/:spot (modal dialog)
+
   - /transactions (view all transactions company wide)
 
 Actions:
+
   - toggle space occupancy
+    -2 actions
   - calculate cost
-  -
+    -
+  - view lot?
+
 
 Store:
   - array of lot objects
