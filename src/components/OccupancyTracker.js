@@ -22,7 +22,7 @@ class OccupancyTracker extends Component {
     const Tracker = this.props.lots.map(lot => {if (lot.lotName === currentLot){
         //map through the spots array for the associated lot. If the boat value is null, add one to the available counter. If there is a value present, add one to the occuied counter.
         lot.spots.map(spot => {
-          if (spot.boat === null){
+          if (spot.transaction === null){
             available++
           } else {
             occupied++

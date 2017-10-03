@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './styles/App.css';
 
 //import router
-import { Switch, Route, Redirect} from 'react-router-dom';
+import { Switch, Route, withRouter } from 'react-router-dom';
 
 //import redux goodies
 import { connect } from 'react-redux';
@@ -59,4 +59,4 @@ function mapDispatch2Props(dispatch){
   }
 }
 
-export default connect(mapState2Props, mapDispatch2Props) (App);
+export default withRouter(connect(mapState2Props, mapDispatch2Props)(App));

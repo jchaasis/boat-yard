@@ -4,9 +4,12 @@ class Modal extends Component {
 
   render(){
 
-    return(
-      <div>
 
+    return(
+      <div className="modalStyle">
+        <h2> Enter Registration Number </h2>
+        <input type="text" placeholder="Number" />
+        <button> Submit </button>
       </div>
     )
   }

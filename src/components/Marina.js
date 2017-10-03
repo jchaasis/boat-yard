@@ -11,10 +11,12 @@ class MarinasList extends Component {
   render(){
 
     return(
+
       <Link to={'/lots/'+this.props.marina.lotName}>
         <li> <h3>{this.props.marina.lotName} </h3></li>
         <OccupancyTracker currentLot={this.props.marina.lotName}/>
       </Link>
+
     )
   }
 }

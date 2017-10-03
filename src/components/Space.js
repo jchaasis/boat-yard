@@ -1,13 +1,72 @@
 import React, { Component } from 'react';
 
+//import components
+
+
 class Space extends Component {
+  constructor(props){
+    super(props);
 
-  handleClick(){
-
-    // console.log({this.props.boat})
+    this.state = {
+      clicked: false,
+    }
   }
 
+  handleClick(){
+    this.props.clicked()
+    console.log('clicked')
+    console.log(this.props.id);
+  }
+
+  //
+  // if( this.props.boat === null){
+  //   return(
+  //   <div style={spaceStyle} onClick={()=>this.handleClick()}>
+  //   </div>
+  //   )
+  // } else {
+  //
+  //   return(
+  //   <div style={spaceStyle} onClick={()=>this.handleClick()}>
+  //     <h1 className="boat">&#128741;</h1>
+  //   </div>
+  //   )
+  // }
+
+  // this.state.occupied ? (return(
+  //   <div style={spaceStyle} onClick={()=>this.handleClick()}>
+  //     <h1 className="boat">&#128741;</h1>
+  //   </div>)
+  // ) : (return(
+  //
+  //   <div style={spaceStyle} onClick={()=>this.handleClick()}>
+  //    </div>
+  //           )
+  //     )
+//
+//   if( this.props.boat === null){
+//     this.setState({
+//       occupied: false,
+//     })
+//   } else {
+//     this.setState({
+//       occupied: true,
+//   })
+// }
+//
+// if (this.state.occupied === false){
+//   return(
+//   <div style={spaceStyle}   onClick={()=>this.handleClick()}>
+//   </div>)
+// } else {
+//   return(
+//   <div style={spaceStyle} onClick={()=>this.handleClick()}>
+//      <h1 className="boat">&#128741;</h1>
+//    </div>)
+// }
+
   render(){
+
     let spaceStyle = {
       width: "100px",
       height: "100px",
@@ -17,20 +76,19 @@ class Space extends Component {
       borderColor:"black"
     }
 
-    if( this.props.boat === null){
+    if( this.props.transaction === null){
       return(
-      <div style={spaceStyle} >
-
+      <div style={spaceStyle} onClick={()=>this.handleClick()}>
       </div>
       )
     } else {
+
       return(
-      <div style={spaceStyle} >
+      <div style={spaceStyle} onClick={()=>this.handleClick()}>
         <h1 className="boat">&#128741;</h1>
       </div>
       )
     }
-
   }
 }
 

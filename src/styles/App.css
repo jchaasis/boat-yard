@@ -27,13 +27,24 @@
   to { transform: rotate(360deg); }
 }
 
-
 /*lot overview styles*/
 .parkingGrid{
+  position: relative;
   margin-left: 20%;
   width: 500px;
   display: flex;
   flex-wrap:wrap;
+}
+
+/*modal*/
+.modalStyle{
+  margin: 0px;
+  padding: 100px;
+  background-color: darkgrey;
+  z-index:3;
+  position: fixed;
+
+
 }
 
 .boat {
