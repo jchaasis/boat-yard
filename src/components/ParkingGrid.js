@@ -15,9 +15,9 @@ class ParkingGrid extends Component {
     }
   }
 
-  handleSpotClick(){
+  handleSpotClick(coords){
+    console.log(coords);
 
-    console.log(this.state.clicked)
     this.setState({
       clicked: !this.state.clicked,
     })
@@ -30,9 +30,10 @@ class ParkingGrid extends Component {
     const currentLot = this.props.currentLot;
     //map through the lots that are currently held in the store and find the one whose name matches the value of the current lot.
     const spaces = this.props.lots.map(lot => {if (lot.lotName === currentLot){
+      let lotId = lot.id;
       //iterate through the spots array for the matching lot
       return(
-      lot.spots.map( (space, index) => <Space key={index} id={index} transaction={space.transaction} clicked={()=>this.handleSpotClick()}/>))};
+      lot.spots.map( (space, index) => <Space key={index} id={index} lotId={lotId} transaction={space.transaction} clicked={coords=>this.handleSpotClick(coords)}/>))};
     });
 
     let toggleModal;

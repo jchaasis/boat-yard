@@ -9,13 +9,17 @@ class Space extends Component {
 
     this.state = {
       clicked: false,
+
     }
   }
 
   handleClick(){
-    this.props.clicked()
-    console.log('clicked')
-    console.log(this.props.id);
+    //spot coordinates to pass back up to the modal dialog box to make the post request. If I had originally set the lot id as the lot identifier in the url, I wouldn't have had to pass the lotId back up from this location.
+    let spotCoordinates= {spotId: this.props.id,
+                          lotId: this.props.lotId
+                        };
+
+    this.props.clicked(spotCoordinates)
   }
 
   //
