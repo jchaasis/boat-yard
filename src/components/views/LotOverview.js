@@ -1,19 +1,14 @@
 import React, { Component } from 'react';
 
 //import from router
-import { } from 'react-router-dom';
+import { UpdateBlocker } from 'react-router-dom';
+//import components
 import NavBar from '../NavBar';
 import ParkingGrid from '../ParkingGrid';
+import OccupancyTracker from '../OccupancyTracker';
 
 class LotOverview extends Component {
 
-  // componentDidMount(){
-  //   fetch("https://theboatlot.herokuapp.com/lots")
-  //     .then(resp => resp.json())
-  //     .then( resp =>
-  //         console.log(resp)
-  //     )
-  // }
 
   render(){
 
@@ -23,15 +18,17 @@ class LotOverview extends Component {
     }
 
     const rp = this.props.match.params.id;
-    console.log(rp)
+  
 
     return(
     <div style={overview}>
       <div>
+
         <NavBar />
       </div>
       <div>
         <h1> {rp} </h1>
+        <OccupancyTracker currentLot={rp}/>
         <ParkingGrid currentLot={rp}/>
       </div>
     </div>

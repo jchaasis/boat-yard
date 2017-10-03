@@ -7,6 +7,7 @@ import { Switch, Route, Redirect} from 'react-router-dom';
 //import redux goodies
 import { connect } from 'react-redux';
 
+//import actions
 import { displayLots } from './actions';
 
 //import views
@@ -21,19 +22,18 @@ class App extends Component {
   }
 
   render() {
+
     return (
       <div className="App">
         <header className="App-header">
         <h1> Boat Yard </h1>
         </header>
-
         <main>
           <Switch>
               <Route path='/lots/:id' component={LotOverview}/>
               <Route path='/' component={LotNavigation}/>
           </Switch>
         </main>
-
       </div>
     );
   }
@@ -45,6 +45,7 @@ function mapState2Props(state){
     lots: state.lots,
   }
 }
+
 //retrieve the actions to be used to upstate the store
 function mapDispatch2Props(dispatch){
   return{

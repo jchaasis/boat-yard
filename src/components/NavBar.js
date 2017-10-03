@@ -8,12 +8,12 @@ class NavBar extends Component {
 
   render(){
 
-  const marinas = this.props.lots.map((marina, index) => <Marina key={index} name={marina.lotName} />);
+  const marinas = this.props.lots.map((marina, index) => <Marina key={index} marina={marina} />);
 
     return(
       <div>
-        <ul >
-          {marinas}
+        <ul>
+          { marinas }
         </ul>
       </div>
     )

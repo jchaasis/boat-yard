@@ -15,7 +15,7 @@ class MarinasList extends Component {
         listStyle: 'none',
     }
 
-  const marinas = this.props.lots.map((marina, index) => <Marina key={index} name={marina.lotName} />);
+  const marinas = this.props.lots.map((marina, index) => <Marina key={index} marina={marina} />);
 
     return(
 
