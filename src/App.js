@@ -21,24 +21,6 @@ class App extends Component {
     this.props.display()
   }
 
-  // comopnentWillReceiveProps(nextProps){
-  //
-  //   console.log('getting new props')
-  //
-  //   if (nextProps.lots != this.props.lots){
-  //       this.props.display()
-  //    }
-  // }
-
-
-  componentWillUpdate(nextProps){
-    console.log('willupdate')
-    if (nextProps.lots !== this.props.lots){
-      //  this.props.display()
-    }
-  }
-
-
   render() {
 
     return (

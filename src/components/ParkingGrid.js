@@ -16,14 +16,22 @@ class ParkingGrid extends Component {
     }
   }
 
+  //when a spot is clicked, toggle the visibility of the modal dialog and grab the spot and lot coordinates from that particular spot.
   handleSpotClick(coords){
-
     this.setState({
       clicked: !this.state.clicked,
       spotCoords: coords,
     })
-    // console.log(this.state.spotCoords);
   }
+
+  //when the submit on the modal dialog box is clicked, revert the state and clear the spot coords to prepare for the next parker.
+  handleSubmit(){
+    this.setState({
+      clicked: !this.state.clicked,
+      spotCoords: '',
+    })
+  }
+
 
   render(){
 
@@ -38,9 +46,10 @@ class ParkingGrid extends Component {
     });
 
     let toggleModal; //variable to be used to show the modal dialog box
-    //when you click on an item, switch the state to clicked, and then render the modal dialog box.
+
+    //when the state shows that a spot has been clicked, render the modal dialog box. After he license number has been submitted,
     if (this.state.clicked === true){
-      toggleModal = <Modal spotCoords={this.state.spotCoords}/>
+      toggleModal = <Modal spotCoords={this.state.spotCoords} submit={ () => this.handleSubmit()}/>
     } else {
       toggleModal = null
     }
