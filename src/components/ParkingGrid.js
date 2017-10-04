@@ -12,16 +12,17 @@ class ParkingGrid extends Component {
 
     this.state = {
       clicked: false,
+      spotCoords: '',
     }
   }
 
   handleSpotClick(coords){
-    console.log(coords);
 
     this.setState({
       clicked: !this.state.clicked,
+      spotCoords: coords,
     })
-
+    // console.log(this.state.spotCoords);
   }
 
   render(){
@@ -36,10 +37,10 @@ class ParkingGrid extends Component {
       lot.spots.map( (space, index) => <Space key={index} id={index} lotId={lotId} transaction={space.transaction} clicked={coords=>this.handleSpotClick(coords)}/>))};
     });
 
-    let toggleModal;
-
+    let toggleModal; //variable to be used to show the modal dialog box
+    //when you click on an item, switch the state to clicked, and then render the modal dialog box.
     if (this.state.clicked === true){
-      toggleModal = <Modal />
+      toggleModal = <Modal spotCoords={this.state.spotCoords}/>
     } else {
       toggleModal = null
     }

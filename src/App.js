@@ -14,12 +14,30 @@ import { displayLots } from './actions';
 import LotNavigation from './components/views/LotNavigation';
 import LotOverview from './components/views/LotOverview';
 
-
 class App extends Component {
+
 
   componentDidMount(){
     this.props.display()
   }
+
+  // comopnentWillReceiveProps(nextProps){
+  //
+  //   console.log('getting new props')
+  //
+  //   if (nextProps.lots != this.props.lots){
+  //       this.props.display()
+  //    }
+  // }
+
+
+  componentWillUpdate(nextProps){
+    console.log('willupdate')
+    if (nextProps.lots !== this.props.lots){
+      //  this.props.display()
+    }
+  }
+
 
   render() {
 
