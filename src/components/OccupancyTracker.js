@@ -4,21 +4,18 @@ import { connect } from 'react-redux';
 
 class OccupancyTracker extends Component {
 
-
-
-
   render(){
 
     //name of the current lot in the lot overview
     const currentLot = this.props.currentLot;
 
     //create counters to be used to measuere occupancy
-    let total = 0;
     let occupied = 0;
-    let available = total + occupied;
+    let available = 0;
 
 
-      //map through the lots that are currently held in the store and find the one whose name matches the value of the current lot.
+
+      //map through the lots that are currently held in the store and find the one whose name matches the value of the current lot.TODO: convert to a function
     const Tracker = this.props.lots.map(lot => {if (lot.lotName === currentLot){
         //map through the spots array for the associated lot. If the boat value is null, add one to the available counter. If there is a value present, add one to the occuied counter.
         lot.spots.map(spot => {
@@ -29,6 +26,8 @@ class OccupancyTracker extends Component {
           }
         })
     }});
+    //after the spots have been mapped and accounted for, find the total.
+    let total = occupied + available;
 
     return(
       <div>

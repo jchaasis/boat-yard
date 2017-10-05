@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 
+import { Link } from 'react-router-dom';
+
 import Marina from './Marina';
 
 class NavBar extends Component {
@@ -14,6 +16,11 @@ class NavBar extends Component {
       <div>
         <ul>
           { marinas }
+          <li>
+            <Link to={'/transactions'}>
+              <h3> Transactions </h3>
+            </Link>
+          </li>
         </ul>
       </div>
     )

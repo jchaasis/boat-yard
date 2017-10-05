@@ -8,8 +8,10 @@
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-image:url("http://kalaseybeachpark.com/wp-content/uploads/2015/06/brighton-marina-uk.jpg");
+  background-size:cover;
+  background-position:center;
+  height: 200px;
   padding: 20px;
   color: white;
 }
@@ -43,7 +45,6 @@
   background-color: darkgrey;
   z-index:3;
   position: fixed;
-
 }
 
 .boat {

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Marina from './Marina';
 
 //import goodies from router
-// import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 //import goodies from redux
 import { connect } from 'react-redux';
@@ -23,6 +23,11 @@ class MarinasList extends Component {
 
         {marinas}
 
+        <li>
+          <Link to={'/transactions'}>
+            <h3> Transactions </h3>
+          </Link>
+        </li>
       </ul>
 
     )

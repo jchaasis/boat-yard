@@ -32,7 +32,6 @@ class ParkingGrid extends Component {
     })
   }
 
-
   render(){
 
     //name of the currentLot
@@ -47,9 +46,11 @@ class ParkingGrid extends Component {
 
     let toggleModal; //variable to be used to show the modal dialog box
 
-    //when the state shows that a spot has been clicked, render the modal dialog box. After he license number has been submitted,
+    //when the state shows that a spot has been clicked, render the modal dialog box. After he license number has been submitted, make the box disapear
     if (this.state.clicked === true){
+
       toggleModal = <Modal spotCoords={this.state.spotCoords} submit={ () => this.handleSubmit()}/>
+
     } else {
       toggleModal = null
     }

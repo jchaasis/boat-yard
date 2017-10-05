@@ -13,3 +13,10 @@ export function displayLots(dispLots){
     payload: dispLots,
   }
 }
+
+export function calculate(trans){
+  return{
+    type: 'CALCULATE',
+    payload: trans,
+  }
+}
