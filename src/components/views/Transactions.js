@@ -25,16 +25,16 @@ class Transactions extends Component {
 
 
     return(
-    <div style={overview}>
+    <div className="overviewContainer">
       <div>
         <NavBar />
       </div>
 
-      <section>
+      <section className="tableSect">
         <h1> Transactions </h1>
-      <table>
-        <tbody>
-          <tr>
+      <table className="table">
+
+          <tr className="tableHeadings">
             <th>
               License Number
             </th>
@@ -51,9 +51,10 @@ class Transactions extends Component {
               Lot Number
             </th>
           </tr>
+          <tbody>
 
           {transactions}
-          
+
         </tbody>
       </table>
 

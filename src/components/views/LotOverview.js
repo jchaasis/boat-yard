@@ -12,7 +12,8 @@ class LotOverview extends Component {
   render(){
     // console.log('overview');
 
-    let overview = {
+    let overviewContainer = {
+
       display: 'flex',
       justifyContent: 'space-around',
     }
@@ -21,14 +22,16 @@ class LotOverview extends Component {
     const rp = this.props.match.params.id;
 
     return(
-    <div style={overview}>
-      <div>
+    <div className='overviewContainer'>
+      <div className="navContainer">
         <NavBar />
       </div>
 
-      <div>
-        <h1> {rp} </h1>
-        <OccupancyTracker currentLot={rp}/>
+      <div className='lotOverview'>
+        <div className="overviewHeader">
+          <h1 className="title"> {rp} </h1>
+          <OccupancyTracker currentLot={rp}/>
+        </div>
         <ParkingGrid currentLot={rp}/>
       </div>
     </div>

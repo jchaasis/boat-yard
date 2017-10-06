@@ -56,7 +56,7 @@ class ParkingGrid extends Component {
     }
 
     return(
-      <div>
+      <div className="grid">
       {toggleModal}
         <div className="parkingGrid">
           { spaces }

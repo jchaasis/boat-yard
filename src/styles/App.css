@@ -1,11 +1,10 @@
 .App {
   text-align: center;
 }
+main {
+font-family: 'Oxygen', sans-serif;
+padding: 20px;}
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
 
 .App-header {
   background-image:url("http://kalaseybeachpark.com/wp-content/uploads/2015/06/brighton-marina-uk.jpg");
@@ -16,37 +15,178 @@
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+/*Lot overview navStyle*/
+.navList{
+  padding: 5px;
+  list-style: none;
+  border: 1px solid black
+}
+.navLink{
+  text-decoration: none;
 }
 
-.App-intro {
-  font-size: large;
+.transactionLink{
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.navLinkBlock{
+  padding-top: 20px;
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+.transactionBlock{
+
+  padding-top: 20px;
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+.transactionBlock:hover{
+  background-color: rgb(253,150,120);
+}
+
+.navLinkBlock:hover{
+  background-color: rgb(253,150,120);
+}
+
+.occupancyTracker{
+  border: 8px;
+
 }
 
 /*lot overview styles*/
-.parkingGrid{
-  position: relative;
-  margin-left: 20%;
-  width: 500px;
+.overviewContainer{
+
+display: flex;
+justify-Content: space-between;
+
+}
+
+.navContainer{
+position: relative;
+}
+
+.lotOverview{
+  margin-top: 20px;
   display: flex;
-  flex-wrap:wrap;
+  flex-direction: column;
+  align-content: center;
+}
+
+.overviewHeader{
+  width: 90%;
+  margin-left: 10%;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  padding: 0px;
+
+}
+
+.title{
+  margin: 0px 50px 0px 50px;
+  border-bottom: 4px double black;
+  padding: 10px;
+}
+
+.parkingGrid{
+  /*position: relative;*/
+  margin-left: 10%;
+  width: 90%;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: blue;
+  overflow:scroll;
+}
+
+/*slot style*/
+.spaceStyle {
+  margin: 0px 100px 0px 0px;
+  /*margin-right: 90px;*/
+  padding-right: 20px;
+  width: 80px;
+  height: 90px;
+  border-Width: 18px 0px 18px 10px;
+  border-Style: solid;
+  border-Color:brown;
 }
 
 /*modal*/
+
+
+
 .modalStyle{
   margin: 0px;
   padding: 100px;
-  background-color: darkgrey;
+  background-color: rgb(255,212,148);
   z-index:3;
   position: fixed;
+  bottom: 30%;
+  left: 30%;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(136, 136, 136, 0.83);
+}
+
+.button{
+  background-color: white;
+  padding: 5px;
+  border-style: none;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px rgba(136, 136, 136, 0.83);
+  margin: 3px;
+
+}
+
+.licenseInput{
+padding: 5px;
+border-style: none;
+border-radius: 3px;
+
 }
 
 .boat {
   font-size: 3.5em;
+  position: relative;
+  bottom: 20px;
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+/*Table style*/
+.tableSect{
+  margin-left: 10%;
+}
+.table{
+  border: 1px solid red;
+
+}
+
+.tableHeadings{
+
+  border-bottom: 1px solid black;
+
+}
+
+.tablerow{
+
+}
+
+.table td{
+  padding: 5px;
+  border-top: 1px solid black;
+
 }

@@ -14,7 +14,7 @@ class NavBar extends Component {
 
     return(
       <div>
-        <ul>
+        <ul className={'navList'}>
           { marinas }
           <li>
             <Link to={'/transactions'}>

@@ -10,7 +10,7 @@ class Modal extends Component {
 
     this.state = {
       text: '',
-      bill: 109,
+      bill: '',
     }
   }
   //handle typing so that the text input is stored in the state to then be posted to the api.
@@ -62,10 +62,9 @@ class Modal extends Component {
              }),
          })
          .then((resp) => {
+            props.display(); //update the data in the store
+            return resp.json();//might need to split ^^these two lines into two seperate promises
 
-            return resp.json();
-
-           props.display(); //update the data in the store
          }).then(data => {
 
            this.setState({
@@ -101,14 +100,14 @@ class Modal extends Component {
                 <h2> Your total is ${this.state.bill} </h2>
                 <button onClick={()=>this.handleClose()}> OK </button>
               </div>
-          )
+      )
 
     } else {
           return(
             <div className="modalStyle">
               <h2> Enter Registration Number </h2>
-              <input type="text" placeholder="Number" onChange={(event)=>this.handleTyping(event)}/>
-              <button onClick={()=>this.handleSubmit()}> Submit </button>
+              <input type="text" placeholder="Number" className="licenseInput" onChange={(event)=>this.handleTyping(event)}/>
+              <button className="button" onClick={()=>this.handleSubmit()}> Submit </button>
             </div>
           )
       }

@@ -8,14 +8,14 @@ import { createStore } from 'redux';
 
 function reducer(state, action){
   console.log(action)
-
+  //Update the information in the lots array
   if (action.type === 'DISPLAY'){
     return {
       lots: action.payload,
       transactions: state.transactions,
     }
   }
-
+  //update the information in the transactions array
   if (action.type === 'CALCULATE'){
     return{
       lots: state.lots,

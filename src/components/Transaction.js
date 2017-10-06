@@ -10,7 +10,7 @@ class Transaction extends Component{
 
 
     return(
-      <tr>
+      <tr className="tablerow">
         <td>
           {transaction.boat.licenseNumber}
         </td>

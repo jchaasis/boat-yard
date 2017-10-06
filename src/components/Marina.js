@@ -12,9 +12,11 @@ class MarinasList extends Component {
 
     return(
 
-      <Link to={'/lots/'+this.props.marina.lotName}>
-        <li> <h3>{this.props.marina.lotName} </h3></li>
-        <OccupancyTracker currentLot={this.props.marina.lotName}/>
+      <Link className='navLink' to={'/lots/'+this.props.marina.lotName}>
+        <li className='navLinkBlock'>
+          <h3>{this.props.marina.lotName} </h3>
+          <OccupancyTracker currentLot={this.props.marina.lotName}/>
+        </li>
       </Link>
 
     )

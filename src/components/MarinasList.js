@@ -22,9 +22,8 @@ class MarinasList extends Component {
       <ul style={listStyle}>
 
         {marinas}
-
-        <li>
-          <Link to={'/transactions'}>
+        <li className="transactionBlock">
+          <Link className="transactionLink" to={'/transactions'}>
             <h3> Transactions </h3>
           </Link>
         </li>

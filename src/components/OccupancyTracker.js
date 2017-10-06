@@ -30,8 +30,8 @@ class OccupancyTracker extends Component {
     let total = occupied + available;
 
     return(
-      <div>
-        <p> Occupied:{occupied} Available:{available} Total: {total} </p>
+      <div className='occupancyTracker'>
+        <p> Occupied: {occupied} Available: {available} Total: {total} </p>
       </div>
     )
   }
