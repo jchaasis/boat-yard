@@ -25,6 +25,8 @@ padding: 20px;}
   text-decoration: none;
 }
 
+
+
 .transactionLink{
   text-decoration: none;
 }
@@ -50,6 +52,10 @@ padding: 20px;}
   background-color: rgb(253,150,120);
 }
 
+.navLinkBlock:active{
+  background-color: rgb(140, 241, 255);
+}
+
 .occupancyTracker{
   border: 8px;
 
@@ -58,13 +64,13 @@ padding: 20px;}
 /*lot overview styles*/
 .overviewContainer{
 
-display: flex;
-justify-Content: space-between;
+  display: flex;
+  justify-Content: space-between;
 
 }
 
 .navContainer{
-position: relative;
+  position: relative;
 }
 
 .lotOverview{
@@ -93,7 +99,7 @@ position: relative;
   /*position: relative;*/
   margin-left: 10%;
   width: 90%;
-  height: 500px;
+  height: 600px;
   display: flex;
   flex-wrap: wrap;
   background-color: blue;
