@@ -2,8 +2,11 @@
   text-align: center;
 }
 main {
-font-family: 'Oxygen', sans-serif;
-padding: 20px;}
+  font-family: 'Oxygen', sans-serif;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
 
 
 .App-header {
@@ -58,12 +61,10 @@ padding: 20px;}
 
 .occupancyTracker{
   border: 8px;
-
 }
 
 /*lot overview styles*/
 .overviewContainer{
-
   display: flex;
   justify-Content: space-between;
 
@@ -99,11 +100,11 @@ padding: 20px;}
   /*position: relative;*/
   margin-left: 10%;
   width: 90%;
-  height: 600px;
+  height: 500px;
   display: flex;
   flex-wrap: wrap;
   background-color: blue;
-  overflow:scroll;
+  overflow: scroll;
 }
 
 /*slot style*/
